@@ -1,0 +1,137 @@
+/*  */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.body {
+  background-color: white;
+  width: 100%;
+}
+
+/* div {
+  background-color: white;
+} */
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0;
+  background-color: #3b3b3b;
+}
+
+a {
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+  background-color: #3b3b3b;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: #636363;
+}
+
+a[id*="about"] {
+  background-color: #636363;
+  float: right;
+}
+
+a[id*="home"] {
+  background-color: #636363;
+}
+
+#short-about {
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.212);
+  /* opacity: 0.75; */
+  width: auto;
+  height: 500px;
+  display: block;
+  margin: 10px 10px 0px 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 0;
+  /* background-color: cyan; */
+}
+
+.container .box {
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  float: left;
+  margin: 15px;
+  background: yellow;
+}
+
+.content-container {
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.212);
+  padding-top: 10px;
+}
+
+.content-container .box-content-1{
+  /* padding: 70px 0px; */
+  margin-bottom: 50px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.displays {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+  .content-container {
+    width: 100%;
+  }
+  .displays {
+    width: 100%;
+  }
+  * {
+    width: 100%;
+  }
+}
+
+#short-about p,
+h2 {
+  font-weight: bold;
+}
+
+#header {
+  background-image: URL(resources/images/Funchal-bg.jpg);
+  background-size: cover;
+  text-align: center;
+  height: 500px;
+  width: 100%;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
