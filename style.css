@@ -2,6 +2,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .body {
@@ -13,16 +14,23 @@ body {
   background-color: white;
 } */
 
-nav {
+#topnav {
   position: -webkit-sticky;
   position: sticky;
   margin: 0;
+  overflow: hidden;
   background-color: #3b3b3b;
+}
+
+#topnav a{
+  float: left;
+  display: block;
+  text-align: center;
 }
 
 a {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 10px;
   margin: 0;
   background-color: #3b3b3b;
   text-decoration: none;
@@ -73,6 +81,54 @@ a[id*="home"] {
   float: left;
   margin: 15px;
   background: yellow;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .box .image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .box:hover .image{
+  top:20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: .9;
+}
+
+.container .box .content{
+  position: absolute;
+  top: 100%;
+  height: calc(100%-100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .5s;
+}
+
+.container .box:hover .content{
+  top: 100px;
+}
+
+#more a{
+  position: relative;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #3b3b3b38;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .content-container {
@@ -83,11 +139,18 @@ a[id*="home"] {
 }
 
 .content-container .box-content-1{
-  /* padding: 70px 0px; */
   margin-bottom: 50px;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  /* border-bottom: black 1px solid; */
+  padding-bottom: 30px;
+}
+
+.content-container .box-content-1 h3{
+  background-color: #3b3b3b38;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .displays {
@@ -103,11 +166,21 @@ a[id*="home"] {
   .content-container {
     width: 100%;
   }
-  .displays {
+  .content-container .box-content-1{
     width: 100%;
   }
   * {
     width: 100%;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .displays .container .box {
+    width: 100%;
+  }
+  #topnav a{
+    border: white 1px solid;
+    text-align: center;
   }
 }
 
