@@ -5,11 +5,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.body {
-  background-color: white;
-  width: 100%;
-}
-
 /* div {
   background-color: white;
 } */
@@ -51,14 +46,14 @@ a[id*="home"] {
 }
 
 main{
+  text-align: center;
   margin: 0px 10px 0px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
 #short-about {
-  text-align: center;
-  background-color: rgba(128, 128, 128, 0.212);
   /* opacity: 0.75; */
+  background-color: rgba(128, 128, 128, 0.212);
   width: auto;
   height: 300px;
   display: block;
@@ -69,6 +64,7 @@ main{
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .clearfix::after {
@@ -92,7 +88,7 @@ main{
 }
 
 .content-container .content{
-  /* border-bottom: black 1px solid; */
+  border-bottom: black 1px solid;
   padding-bottom: 30px;
 }
 
@@ -182,18 +178,19 @@ main{
   .content-container {
     width: 100%;
   }
-  .content-container .ontent{
-    width: 100%;
-  }
-  * {
+ .content{
     width: 100%;
   }
 }
 
 @media screen and (max-width:900px) {
   .displays .container .box {
-    width: 100%;
+    width: 50%;
+    height: 50%;
   }
+}
+
+@media screen and (max-width:900px) {
   #topnav a{
     border: white 1px solid;
     text-align: center;
@@ -225,14 +222,23 @@ main{
   font-size: 18px;
 }
 
-.column {
-  float: left;
-  width: 100%;
-  padding-top: 10px;
+footer{
+  background-color: rgba(44, 44, 44, 0.555);
+  margin: 0;
+  padding: 0;
+  height: auto;
 }
 
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+.footer{
+  padding-top: 20px;
+  margin: 10px 0 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+@media screen and (max-width: 1920px) {
+  footer{
+    width: 100%;
+  }
 }
