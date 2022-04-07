@@ -216,6 +216,8 @@ main{
   border-bottom:rgba(44, 44, 44, 0.425) 2px solid ;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
   z-index: -1;
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
 }
 
 .center {
